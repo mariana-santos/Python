@@ -1,13 +1,13 @@
-# Exercício 0 -> Entrar com o peso e a altura de uma determinada pessoa. Após a digitação, exibir se esta pessoa está ou não com seu peso ideal. Fórmula: peso/altura².
+p1 = float(input("Digite o valor do primeiro produto: "))
+p2 = float(input("Digite o valor do segundo produto: "))
+p3 = float(input("Digite o valor do terceiro produto: "))
+p4 = float(input("Digite o valor do quarto produto: "))
+p5 = float(input("Digite o valor do quinto produto: "))
 
-peso = float(input("Insira seu peso: "))
-altura = float(input("Insira sua altura: "))
+pago = float(input("Digite o valor pago pelos produtos: "))
 
-imc = peso / (altura * altura)
+total = p1 +p2 + p3 + p4
 
-if imc < 20:
-    print("Abaixo do peso")
-elif imc < 25:
-    print("Peso ideal")
-else:
-    print("Acima do peso")
+troco = pago - total
+
+print(f"Troco da venda: R${troco}")
