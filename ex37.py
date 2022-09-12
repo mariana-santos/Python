@@ -10,7 +10,7 @@ while(numero <= 20 ):
         print(f'{i} x {numero} = {numero * i}')
         i += 1
     if(numero != 20):
-        valor = input('Selecione alguma tecla para continuar: ')
+        input('Aperte qualquer tecla para continuar: ')
     
     numero += 1
 
@@ -21,4 +21,4 @@ for numero in range (1, 21, 1):
         print(f'{i} x {numero} = {numero * i}')
 
     if(numero != 20):
-        valor = input('Selecione alguma tecla para continuar: ')
+        input('Aperte qualquer tecla para continuar: ')
