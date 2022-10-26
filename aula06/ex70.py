@@ -35,7 +35,6 @@ while(opcao == 'S'):
                 print(f'Valor encontrado na linha {i + 1}, coluna {j + 1}')
                 qtdEncontrada += 1
 
-    if(qtdEncontrada == 0):
-        print('Nenhum valor encontrado')
+    if(qtdEncontrada == 0): print('Nenhum valor encontrado')
 
     opcao = str(input('Deseja consultar outro valor? (S/N) ')).upper()
