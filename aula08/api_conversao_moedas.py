@@ -1,7 +1,9 @@
-import requests
+import pip._vendor.requests as requests
 
 print('---Conversão de Moedas---')
 reais = float(input("Qual o valor em R$ que deseja converter? "))
+
+moedas = {1: 'USD', 2: 'EUR', 3: 'BTC'}
 
 while(reais <= 0):
     reais = float(input("Valor inválido. Digite novamente o valor em R$ que deseja converter: "))
@@ -11,19 +13,12 @@ opcao = int(input('Deseja converter para: \n 1. Dólar \n 2. Euro \n 3. Bitcoin 
 while(opcao <= 0 or opcao > 3):
     opcao = int(input('Opção inválida. Deseja converter para: \n 1. Dólar \n 2. Euro \n 3. Bitcoin '))
 
-if(opcao == 1):
-    opcao_str = 'USD-BRL'
-elif (opcao == 2):
-    opcao_str = 'EUR-BRL'
-else:
-    opcao_str = 'BTC-BRL'
-
-url = f"https://economia.awesomeapi.com.br/json/last/{opcao_str}"
+url = f"https://economia.awesomeapi.com.br/json/last/{moedas[opcao]}-BRL"
 
 response = requests.get(url)
 dados = response.json();
 
-opcao_str = opcao_str.replace('-', '')
+opcao_str = f'{moedas[opcao]}BRL'
 
 result = reais * float(dados[opcao_str]['ask'])
 
